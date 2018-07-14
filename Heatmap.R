@@ -65,7 +65,7 @@ message(paste("COL",length(COL_DOWN_UP),"BREAKS",length(BREAKS_DOWN_UP),sep = "_
 library(gplots)
 tiff(filename = "temp.tiff",height = 1800,width = 800,res = 90*3,type = "windows")
 svg(filename = "temp.svg",width = 10,height = 10)
-gplots::heatmap.2(x = mat,scale ='none',breaks = BREAKS_DOWN_UP,col = COL_DOWN_UP
+win.graph();gplots::heatmap.2(x = mat,scale ='none',breaks = BREAKS_DOWN_UP,col = COL_DOWN_UP
                               ,trace="none"
                               ,hclustfun = function(x){hclust(x,method = 'ward.D2')}
                               #,distfun = function(x){dist(x,method = "manhattan")}
